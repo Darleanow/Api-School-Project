@@ -1,0 +1,26 @@
+###
+GET http://localhost:3000/drinks HTTP/1.1
+
+###
+POST http://localhost:3000/drinks HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "coca-cola"
+}
+
+###
+PUT http://localhost:3000/drinks/1 HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "coca-cola"
+}
+
+###
+DELETE http://localhost:3000/drinks/1 HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "coca-cola"
+}
