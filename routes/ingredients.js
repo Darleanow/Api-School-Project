@@ -11,12 +11,12 @@ router.get("/:id", function (request, response, next) {
 
 router.post("/", function (request, response, next) {
   const ingredient = request.body;
-  response.send( ingredient.name + " add ingredient");
+  response.send(ingredient.name + " add ingredient");
 });
 
 router.put("/:id", function (request, response, next) {
   const ingredient = request.body;
-  response.send( ingredient.name + " update ingredient " + request.params.id);
+  response.send(ingredient.name + " update ingredient " + request.params.id);
 });
 
 router.delete("/:id", function (request, response, next) {
