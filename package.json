@@ -4,8 +4,7 @@
   "private": true,
   "scripts": {
     "start": "nodemon ./bin/www",
-    "dev": "backpack",
-    "build": "backpack build"
+    "swagger": "node ./swagger.js"
   },
   "dependencies": {
     "backpack-core": "^0.8.4",
@@ -14,7 +13,9 @@
     "express": "~4.16.1",
     "http-errors": "~1.6.3",
     "jade": "~1.11.0",
-    "morgan": "~1.9.1"
+    "morgan": "~1.9.1",
+    "swagger-autogen": "^2.23.7",
+    "swagger-ui-express": "^5.0.0"
   },
   "nodemonConfig": {
     "ext": "js,json,hbs,html,css"

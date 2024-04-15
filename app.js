@@ -13,6 +13,10 @@ var menusRouter = require("./routes/menus");
 
 var app = express();
 
+// Routes documentation
+const swaggerUi = require("swagger-ui-express");
+const swaggerDocument = require("./swagger-output.json");
+
 // view engine setup
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "jade");
@@ -23,7 +27,11 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 
+// Routes
 app.use("/", indexRouter);
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+
+// Api routes
 app.use("/users", usersRouter);
 app.use("/ingredients", ingredientsRouter);
 app.use("/drinks", drinksRouter);
