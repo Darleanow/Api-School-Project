@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "start": "nodemon ./bin/www",
+    "browsersync": "browser-sync start --config bs-config.js",
     "swagger": "node ./swagger.js"
   },
   "dependencies": {
